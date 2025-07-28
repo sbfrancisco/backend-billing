@@ -10,7 +10,7 @@ module AppConfig
   def self.registered(app)
     app.enable :sessions
     app.set :database_file, 'config/database.yml'
-    app.set :frontend, false # if we take care of the frontend also with ruby -> true
+    app.set :frontend, true # if we take care of the frontend also with ruby -> true
     app.use Rack::MethodOverride
 
     if app.settings.frontend
