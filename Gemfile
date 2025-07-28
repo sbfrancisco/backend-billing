@@ -8,13 +8,15 @@ gem 'puma', '~> 6.6'
 gem 'sinatra-contrib'
 gem 'sinatra-activerecord'
 gem 'prawn'
-gem 'pg'
-gem 'sqlite3', '~> 2.0', group: [:development, :test]
+gem 'sqlite3', '~> 2.0'
 gem 'rake'
 gem 'bcrypt'
-
 
 group :test, :development do
   gem 'rspec'
   gem 'rack-test'
+
+group :production do
+  gem "pg"
+end
 end
