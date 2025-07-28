@@ -9,7 +9,7 @@ require_relative '../models/contact'
 module AppConfig
   def self.registered(app)
     app.enable :sessions
-    app.set :database, adapter: 'sqlite3', database: 'db/wallet_development.sqlite3'
+    set :database_file, 'config/database.yml'
     app.set :frontend, false # if we take care of the frontend also with ruby -> true
     app.use Rack::MethodOverride
 
