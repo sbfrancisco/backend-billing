@@ -9,7 +9,7 @@ require_relative '../models/contact'
 module AppConfig
   def self.registered(app)
     app.enable :sessions
-    set :database_file, 'config/database.yml'
+    app.set :database_file, 'config/database.yml'
     app.set :frontend, false # if we take care of the frontend also with ruby -> true
     app.use Rack::MethodOverride
 
