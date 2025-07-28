@@ -54,7 +54,7 @@ end
 
   get '/clients' do
   content_type :json
-  clientes = Client.all.find_by()
+  clientes = Client.all
   clientes.to_json
   end
 
